@@ -9,11 +9,28 @@
     <div>123</div>
     <script>
         function add(num1,num2){
-        console.log(num1);
-        console.log(num2);
-        console.log(num1+num2);
+        return parseInt(num1)+parseInt(num2);
         }
-        add(3,4)
+        const res = add("100000.988",4);
+        const addRes=(num1,num2)=>{
+           return parseInt(num1)+parseInt(num2)
+           console.log("有嗎") //test，在return後所以是不會出現的
+        }
+        console.log(res);
+        console.log(addRes("100000.988",4));
+
+        //延伸題，'我是xxx'，血型??'
+        const info=(name,blood)=>{
+            return `我是${name},血型${blood}`
+        }
+        console.log(info("Sandy","B"));    
+        //簡短寫法2
+        const info2=(name,blood)=> `我是${name},血型${blood}`
+        console.log(info("Mandy","AB"));  
+        function add2(num1){
+        console.log (num1*100);
+        }
+        add2(100);
     </script>
 </body>
 </html>
