@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+</head>
+<body>
+    <div id="app">  
+        <p>我是{{name}}，來到這個網站</p>
+        <p>{{live? "活著":"死掉了"}}</p> //三元運算式
+        <p>要去聽{{music[0]}}</p> //陣列
+        <p>會用{{skill["f2e"]}}</p> //物件
+        <!-- <p v-text="`${age}歲`"></p>
+        <h6 v-html="content"></h6>       -->
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        // debugger // 方式1：可以debug
+        // console.log(Vue) // 方式2：可以debug
+       const app = Vue.createApp({
+        data() {
+            return {
+               name:'Sandy',
+               age:37,
+               live:true,
+               music:['aimar','one ok rock','mamamoo'],
+               skill:{
+                f2e:['vue','react'],
+                b2e:['php','node.js','ASP.net']
+               },
+               gender:null,
+               content:`<div style="color:red; font-size:30px;">
+                嘿嘿<br>
+                吼吼~
+                </div>`
+            }
+        },
+       })
+       app.mount('#app')
+    </script>
+</body>
+</html>
