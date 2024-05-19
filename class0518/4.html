@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+        }
+        .red{
+            background-color: rgb(197, 60, 60);
+        }
+        .green{
+            background-color: rgb(87, 199, 87);
+        }
+    </style>
+</head>
+<body>
+    <!-- 購物車邏輯 -->
+    <div id="app">   
+        {{tab}}
+        <button @click="tab= !tab">換色</button>
+        <div class="box" :class="tab?'red':'green'"></div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    tab:true
+                }
+            },
+        methods: {
+        },
+
+        }).mount('#app')
+    </script>
+</body>
+</html>
